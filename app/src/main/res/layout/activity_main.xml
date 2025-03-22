@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#8C9EFF"
+    tools:context=".MainActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:text="Please Login \nHere!"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textSetByDefaults1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="90dp"
+            android:hint="Enter Your Email"
+            app:boxBackgroundColor="#BCF4F0F0"
+            app:boxStrokeColor="@color/black"
+            app:startIconDrawable="@drawable/mail"
+            app:boxStrokeWidth="0.5dp"
+            app:boxStrokeWidthFocused="0.5dp"
+            app:hintTextColor="@color/black"
+            app:startIconTint="@color/black"
+            tools:ignore="HardcodedText">
+            <!--            app:startIconDrawable="@drawable/title"-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_Text_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textSetByDefaults2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/textSetByDefaults1"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:hint="Enter Your Password"
+            app:boxBackgroundColor="#BCF4F0F0"
+            app:boxStrokeColor="@color/black"
+            app:boxStrokeWidth="0.5dp"
+            app:startIconDrawable="@drawable/padlock"
+            app:endIconMode="password_toggle"
+            app:boxStrokeWidthFocused="0.5dp"
+            app:hintTextColor="@color/black"
+            app:startIconTint="@color/black"
+            tools:ignore="HardcodedText">
+            <!--            app:startIconDrawable="@drawable/title"-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_Text_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                tools:ignore="DuplicateClickableBoundsCheck,DuplicateSpeakableTextCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/textSetByDefaults2"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="40dp"
+            android:background="#8C9EFF"
+            android:text="login" />
+        <TextView
+            android:id="@+id/textViewForgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#FD0808"
+            android:layout_marginTop="110dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/textSetByDefaults2"
+            android:layout_marginLeft="20dp"
+            android:text="ForgetPassword"/>
+
+        <TextView
+            android:id="@+id/textViewAccountDont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/btn_login"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:text="I Don't Have Account?"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Btn_reg"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/textViewAccountDont"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="20dp"
+            android:background="#B9F6CA"
+            android:text="SigNup" />
+    </RelativeLayout>
+
+</RelativeLayout>
